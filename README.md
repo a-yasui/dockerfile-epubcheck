@@ -5,7 +5,7 @@ Run epubcheck on docker
 ## Installation
 
 ```sh
-$ docker pull gnue/epubcheck
+$ docker pull atyasu/epubcheck
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ $ docker run -t -i --rm -v "$(pwd):/app/data" gnue/epubcheck [OPTIONS] [file...]
 
 * file is EPUB file only
 * OPTIONS
-  * show help `docker run -t -i --rm gnue/epubcheck -h`
+  * show help `docker run -t -i --rm atyasu/epubcheck -h`
   * can use variables
     * `$file` is file path
     * `$fname` is file name without file exstention
@@ -52,7 +52,7 @@ docker-compose.yml:
 epubcheck:
   environment:
     EPUBCHECK_FLAGS: "--json log/$$fname.json"
-  image: gnue/epubcheck
+  image: atyasu/epubcheck
   volumes:
     - "./data:/app/data:ro"
     - "./log:/app/log"

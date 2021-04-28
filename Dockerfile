@@ -4,7 +4,7 @@ RUN apk add --update bash curl unzip openjdk7 && \
     rm /var/cache/apk/*
 
 # epubcheck
-ENV EPUBCHECK epubcheck-4.0.1
+ENV EPUBCHECK epubcheck-4.2.5
 
 RUN curl -L -o "/tmp/$EPUBCHECK.zip" "https://github.com/IDPF/epubcheck/releases/download/v${EPUBCHECK#*-}/$EPUBCHECK.zip" \
  && unzip "/tmp/$EPUBCHECK.zip" -d /app \

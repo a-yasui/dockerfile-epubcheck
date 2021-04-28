@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.13
 
 RUN apk add --update bash curl unzip openjdk7 && \
     rm /var/cache/apk/*
